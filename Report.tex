@@ -23,7 +23,7 @@
 
 \makeatletter
 \def\@makechapterhead#1{%
-	\vspace*{50\p@}%
+	%\vspace{25\p@}%
 	{\parindent \z@ \raggedright \normalfont
 		\ifnum \c@secnumdepth >\m@ne
 		\if@mainmatter
@@ -124,9 +124,70 @@
 		\item{The brake percentage was increased incrementally and the torque, speed, and motor current were noted for all brake percentages examined.}
 	\end{enumerate}
 	
+	
 	\chapter{Results}
 	
+	The experiment yielded the raw data which can be seen in Appendix A. This data was transferred to a set of graphs to aid the usefulness of the data, and to allow easy viewing of patterns and trends. These graphs can be seen below in Figures \ref{fig:DSP_results} and \ref{fig:Model_results}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{DSP_pC_1}
+		\caption{Results from the dynamometer for various frequencies}
+		\label{fig:DSP_results}	
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{Model_pC_1}
+		\caption{Results from the motor drive panel for various frequencies}
+		\label{fig:Model_results}
+	\end{figure}
+	
 	\chapter{Analysis and Discussion}
+	
+	\section{Experimental vs Theory}
+	
+	\section{50Hz Low Slip Region}
+	
+	Figure 3.1 shows that in the 50 Hz data from the dynamometer, there is a linear trend in the low slip region. This region is from 1496 RPM to 1392 RPM, and is approximated by the linear equation shown in Equation \ref{eq:actual_approx}.
+	\begin{align}
+		T = -0.040\omega + 60.027
+		\label{eq:actual_approx}
+	\end{align}
+	
+	The theoretical curve is given by Equation \ref{eq:theoretical}.
+	
+	\begin{align}
+	T = -0.033\omega + 49.435
+	\label{eq:theoretical}
+	\end{align}
+	
+	These curves can be seen in Figure \ref{fig:pC_3}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{pC_3}
+		\caption{Low slip region of 50 Hz data from dynamometer and theoretical curve from Part A}
+		\label{fig:pC_3}
+	\end{figure}
+	
+	These equations are quite similar, which indicates that the theoretical model of the low slip region provides an adequate approximation of the motor. 
+	
+	\section{Relationship Between Different Frequencies}
+	
+	The data collected from the dynamometer for various frequencies has been plotted in Figure \ref{fig:pC_4} below.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{DSP_pC_1}
+		\caption{Results from the DSP for various frequencies}
+		\label{fig:pC_4}	
+	\end{figure}
+	
+	
+	
+	\section{Voltage and Speed Requirements to Drive Nominal Load at Set Speed}
+	
+	\chapter{Design Analysis}
 	
 	\chapter{Conclusions}
 	
